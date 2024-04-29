@@ -98,13 +98,6 @@ main {
   overflow: auto;
 }
 
-section {
-  /* width: 100%;
-  position: absolute;
-  left: 0;
-  top: 0; */
-}
-
 footer {
   bottom: 0;
   position: sticky;
@@ -118,6 +111,7 @@ footer {
   font-size: 2rem;
 }
 
+/* || SECTIONS */
 .section {
   transform: translateY(-100%) scale(0);
   transition: var(--transition);
@@ -157,7 +151,7 @@ footer {
     transform: translateY(0) scaleY(1);
   }
 }
-/* || NAVIGATION BUTTONS */
+/* || NAVIGATION  */
 .menu {
   position: fixed;
   top: 0;
@@ -165,20 +159,6 @@ footer {
 }
 .menu #menuBtn {
   display: none;
-  /* display: flex !important;
-  justify-content: flex-end;
-  width: 100%;
-  cursor: pointer;
-  i {
-    font-size: 1.5rem;
-    color: var(--color-grey-2);
-  }
-  .hide {
-    display: none;
-  }
-  #hamburger, #close {
-    cursor: pointer;
-  } */
 }
 
 #desktopNav .buttons {
@@ -223,14 +203,6 @@ footer {
 
 #mobileNav {
   display: none;
-  /* a {
-    display: block;
-    padding: 1em;
-    text-decoration: none;
-  } */
-  /* &.show {
-    display: block;
-  } */
 }
 
 .hide {
@@ -241,19 +213,19 @@ footer {
   display: block;
 }
 
-/* || HEADER */
-.header__content {
+/* || HOME */
+.home__content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   height: 100%;
   padding-top: 1.7rem;
 }
-.header__content .header__left {
+.home__content .home__left {
   display: flex;
   align-items: center;
   position: relative;
 }
-.header__content .header__left .header__shape {
+.home__content .home__left .home__shape {
   transition: var(--transition);
   width: 65%;
   height: 100%;
@@ -265,7 +237,7 @@ footer {
   -webkit-clip-path: polygon(0 0, 46% 0, 79% 100%, 0% 100%);
           clip-path: polygon(0 0, 46% 0, 79% 100%, 0% 100%);
 }
-.header__content .header__left .image {
+.home__content .home__left .image {
   border-radius: var(--br-sm-2);
   height: 90%;
   width: 68%;
@@ -273,27 +245,27 @@ footer {
   background-color: #04171a;
   transition: var(--transition);
 }
-.header__content .header__left .image img {
+.home__content .home__left .image img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   transition: var(--transition);
 }
-.header__content .header__right {
+.home__content .home__right {
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding-right: 18rem;
 }
-.header__content .header__right .name {
+.home__content .home__right .name {
   font-size: 3rem;
 }
-.header__content .header__right p {
+.home__content .home__right p {
   margin: 1.5rem 0;
   line-height: 2rem;
 }
-.header__content .header__right p span {
+.home__content .home__right p span {
   color: var(--color-secondary);
 }
 
@@ -490,30 +462,37 @@ footer {
   font-size: 0.8rem;
   margin-top: 1em;
   margin-bottom: 0.5em;
+  text-decoration: underline;
+  /* .project-1__p2 {
+    background-color: #c3321c;
+    border: none;
+    border-radius: 10px;
+    padding: 0.5em;
+  }
+
+  .project-1__p3 {
+    background-color: #c3321c;
+    border: none;
+    border-radius: 10px;
+    padding: 0.5em;
+  }
+
+  .project-1__p4 {
+    background-color: #c3321c;
+    border: none;
+    border-radius: 10px;
+    padding: 0.5em;
+  } */
 }
-.projects__div .project-1__content .project-1__header .header__content .project-1__p1 {
-  background-color: #c3321c;
-  border: none;
-  border-radius: 10px;
-  padding: 0.5em;
-}
-.projects__div .project-1__content .project-1__header .header__content .project-1__p2 {
-  background-color: #c3321c;
-  border: none;
-  border-radius: 10px;
-  padding: 0.5em;
-}
-.projects__div .project-1__content .project-1__header .header__content .project-1__p3 {
-  background-color: #c3321c;
-  border: none;
-  border-radius: 10px;
-  padding: 0.5em;
-}
+.projects__div .project-1__content .project-1__header .header__content .project-1__p1,
+.projects__div .project-1__content .project-1__header .header__content .project-1__p2,
+.projects__div .project-1__content .project-1__header .header__content .project-1__p3,
 .projects__div .project-1__content .project-1__header .header__content .project-1__p4 {
-  background-color: #c3321c;
   border: none;
   border-radius: 10px;
   padding: 0.5em;
+  margin: 0;
+  font-weight: 600;
 }
 .projects__div .project-1__content .project-1__header i {
   font-size: 2rem;
@@ -521,8 +500,6 @@ footer {
   top: 0;
   right: 0;
   margin: 0.2rem;
-  /* padding-top: 2.2rem;
-  padding-left: 1rem; */
 }
 .projects__div .project-1__content .project-1__header i:hover {
   opacity: 80%;
@@ -611,28 +588,28 @@ footer {
     display: flex;
     border-bottom: 1px solid var(--color-grey-6);
   }
-  .header {
+  .home {
     padding: 0;
   }
-  .header .header__right {
+  .home .home__right {
     padding: 2rem !important;
   }
-  .header__content {
+  .home__content {
     grid-template-columns: 1fr;
     padding-bottom: 2rem;
   }
-  .header__left .header__shape {
+  .home__left .home__shape {
     display: none;
   }
-  .header__right {
+  .home__right {
     grid-row: 1;
     width: 90%;
     margin: 0 auto;
   }
-  .header__right .name {
+  .home__right .name {
     font-size: 2.5rem !important;
   }
-  .header__content .header__left .image {
+  .home__content .home__left .image {
     margin: 0 auto;
     width: 90%;
   }
@@ -680,8 +657,14 @@ footer {
     margin: 0;
   }
   .projects .project-1 .project-1__content .project-1__header .header__content {
-    padding: 0.8rem 0;
     font-size: 0.7rem;
+    flex-wrap: wrap;
+  }
+  .projects .project-1 .project-1__content .project-1__header .header__content .project-1__p1,
+  .projects .project-1 .project-1__content .project-1__header .header__content .project-1__p2,
+  .projects .project-1 .project-1__content .project-1__header .header__content .project-1__p3,
+  .projects .project-1 .project-1__content .project-1__header .header__content .project-1__p4 {
+    padding: 0;
   }
   .projects .project-1 .project-1__content .project-1__header i {
     font-size: 2rem;
@@ -741,10 +724,10 @@ footer {
 }
 /* || MEDIUM */
 @media screen and (max-width: 768px) {
-  .header__right {
+  .home__right {
     padding-right: 8rem !important;
   }
-  .header__right .name {
+  .home__right .name {
     font-size: 2.5rem;
   }
   .about {
@@ -776,7 +759,6 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    flex-wrap: wrap;
     justify-content: space-between;
     padding: 0.8rem 0;
     font-size: 0.2rem;

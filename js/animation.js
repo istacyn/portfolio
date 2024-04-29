@@ -2,10 +2,10 @@ let observer = new IntersectionObserver(function (entries) {
   entries.forEach(function (entry) {
     if (entry.isIntersecting) {
       anime({
-        targets: ".skills-div",
+        targets: ".skills__div",
         translateY: [-20, 0],
         opacity: [0, 1],
-        delay: anime.stagger(1000),
+        delay: anime.stagger(1200),
         easing: "easeOutQuad",
       });
       observer.unobserve(entry.target);
@@ -13,4 +13,4 @@ let observer = new IntersectionObserver(function (entries) {
   });
 });
 
-observer.observe(document.querySelector(".skills-div"));
+observer.observe(document.querySelector(".skills__div"));

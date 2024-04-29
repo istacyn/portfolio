@@ -108,15 +108,6 @@ main {
   overflow: auto;
 }
 
-section {
-  // min-height: 100vh;
-  /* width: 100%;
-  position: absolute;
-  left: 0;
-  top: 0; */
-  // padding: 3rem 18rem;
-}
-
 footer {
   bottom: 0;
   position: sticky;
@@ -129,6 +120,8 @@ footer {
   padding: 1rem;
   font-size: 2rem;
 }
+
+/* || SECTIONS */
 
 .section {
   transform: translateY(-100%) scale(0);
@@ -171,30 +164,13 @@ footer {
   }
 }
 
-/* || NAVIGATION BUTTONS */
+/* || NAVIGATION  */
 .menu {
   position: fixed;
   top: 0;
   right: 0;
   #menuBtn {
     display: none;
-    // position: fixed;
-    // top: 0;
-    // right: 0;
-    /* display: flex !important;
-    justify-content: flex-end;
-    width: 100%;
-    cursor: pointer;
-    i {
-      font-size: 1.5rem;
-      color: var(--color-grey-2);
-    }
-    .hide {
-      display: none;
-    }
-    #hamburger, #close {
-      cursor: pointer;
-    } */
   }
 }
 
@@ -245,14 +221,6 @@ footer {
 }
 #mobileNav {
   display: none;
-  /* a {
-    display: block;
-    padding: 1em;
-    text-decoration: none;
-  } */
-  /* &.show {
-    display: block;
-  } */
 }
 
 .hide {
@@ -263,19 +231,19 @@ footer {
   display: block;
 }
 
-/* || HEADER */
-.header__content {
+/* || HOME */
+.home__content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   height: 100%;
   padding-top: 1.7rem;
 
-  .header__left {
+  .home__left {
     display: flex;
     align-items: center;
     position: relative;
 
-    .header__shape {
+    .home__shape {
       transition: var(--transition);
       width: 65%;
       height: 100%;
@@ -304,7 +272,7 @@ footer {
     }
   }
 
-  .header__right {
+  .home__right {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -537,15 +505,21 @@ footer {
         font-size: 0.8rem;
         margin-top: 1em;
         margin-bottom: 0.5em;
+        text-decoration: underline;
 
-        .project-1__p1 {
-          background-color: #c3321c;
+        .project-1__p1,
+        .project-1__p2,
+        .project-1__p3,
+        .project-1__p4 {
+          // background-color: #c3321c;
           border: none;
           border-radius: 10px;
           padding: 0.5em;
+          margin: 0;
+          font-weight: 600;
         }
 
-        .project-1__p2 {
+        /* .project-1__p2 {
           background-color: #c3321c;
           border: none;
           border-radius: 10px;
@@ -564,7 +538,7 @@ footer {
           border: none;
           border-radius: 10px;
           padding: 0.5em;
-        }
+        } */
       }
 
       i {
@@ -576,8 +550,6 @@ footer {
         &:hover {
           opacity: 80%;
         }
-        /* padding-top: 2.2rem;
-        padding-left: 1rem; */
       }
     }
 
